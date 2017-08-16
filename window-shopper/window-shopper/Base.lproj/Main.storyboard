@@ -28,28 +28,43 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-K4-meX" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="140" width="300" height="30"/>
+                                <rect key="frame" x="36" y="150" width="303" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Bef-5K-wZA"/>
-                                    <constraint firstAttribute="width" constant="300" id="WSo-4M-YF1"/>
+                                    <constraint firstAttribute="height" constant="40" id="Bef-5K-wZA"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uY-o4-yTp" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="36" y="215" width="303" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tuP-K4-meX" firstAttribute="top" secondItem="Hlk-R9-lmh" secondAttribute="bottom" constant="25" id="9Kc-Pk-JLt"/>
                             <constraint firstItem="Paa-y2-Rzv" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="BnH-MQ-P3E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tuP-K4-meX" secondAttribute="trailing" constant="20" id="HR7-7c-JEM"/>
+                            <constraint firstItem="1uY-o4-yTp" firstAttribute="width" secondItem="tuP-K4-meX" secondAttribute="width" id="HrC-KZ-dFq"/>
+                            <constraint firstItem="1uY-o4-yTp" firstAttribute="leading" secondItem="tuP-K4-meX" secondAttribute="leading" id="MWd-Q7-Iun"/>
                             <constraint firstItem="Paa-y2-Rzv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NRl-op-Vir"/>
                             <constraint firstItem="Paa-y2-Rzv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QYT-ev-brO"/>
+                            <constraint firstItem="tuP-K4-meX" firstAttribute="top" secondItem="Hlk-R9-lmh" secondAttribute="bottom" constant="35" id="RQa-eP-pTf"/>
+                            <constraint firstItem="tuP-K4-meX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hG9-iy-yP2"/>
+                            <constraint firstItem="1uY-o4-yTp" firstAttribute="height" secondItem="tuP-K4-meX" secondAttribute="height" id="ifx-he-1N6"/>
+                            <constraint firstItem="1uY-o4-yTp" firstAttribute="trailing" secondItem="tuP-K4-meX" secondAttribute="trailing" id="mxD-AL-N7j"/>
                             <constraint firstItem="Hlk-R9-lmh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSU-ta-yLM"/>
-                            <constraint firstItem="tuP-K4-meX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r4w-A8-wWU"/>
+                            <constraint firstItem="1uY-o4-yTp" firstAttribute="top" secondItem="tuP-K4-meX" secondAttribute="bottom" constant="25" id="pc0-R9-zWM"/>
                             <constraint firstItem="Hlk-R9-lmh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="35" id="skI-N8-jiQ"/>
                             <constraint firstItem="Paa-y2-Rzv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="tiJ-Sc-hIo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="1uY-o4-yTp" id="dXl-qr-oBT"/>
+                        <outlet property="wageTxt" destination="tuP-K4-meX" id="sbk-07-N9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
