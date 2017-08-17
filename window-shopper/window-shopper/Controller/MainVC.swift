@@ -38,6 +38,7 @@ class MainVC: UIViewController {
                 resultLbl.isHidden = false
                 hoursLbl.isHidden = false
                 resultLbl.text = String(Wage.getHours(forWage: wage, andPrice: price))
+                
             }
             
         }
